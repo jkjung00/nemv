@@ -152,6 +152,7 @@ export default {
       })
         .then((r) => {
           this.pop('사용자 등록 완료')
+          this.getUsers()
         })
         .catch((e) => {
           this.pop(e.message)

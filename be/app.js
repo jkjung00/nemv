@@ -40,7 +40,7 @@ module.exports = app;
 const mongoose = require('mongoose')
 // const User = require('./models/users')
 
-mongoose.connect('mongodb://localhost:27017/test', { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true }, (err) => {
+mongoose.connect('mongodb+srv://jeffrey:Joon9921!@@cluster0.yibu4.gcp.mongodb.net/nemv', { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true }, (err) => {
   if (err) return console.error(err)
   console.log('mongoose connected!')
 })
