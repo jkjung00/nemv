@@ -39,7 +39,6 @@ const mongoose = require('mongoose')
 // const User = require('./models/users')
 
 const cfg = require('../config')
-console.log(cfg)
 
 mongoose.connect(cfg.dbUrl, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true }, (err) => {
   if (err) return console.error(err)

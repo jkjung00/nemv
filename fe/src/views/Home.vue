@@ -1,17 +1,19 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <v-btn>
+      <v-icon @click="test()">change</v-icon>
+    </v-btn>
+    {{$store.state.token}}
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
 export default {
   name: 'Home',
-  components: {
-    HelloWorld
+  methods: {
+    test () {
+      this.$store.state.token = 444
+    }
   }
 }
 </script>
