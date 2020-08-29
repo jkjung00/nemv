@@ -35,16 +35,15 @@ app.use(function(err, req, res, next) {
   res.send({ msg: err.message })
 });
 
-module.exports = app;
-
 const mongoose = require('mongoose')
 // const User = require('./models/users')
 
-mongoose.connect('mongodb+srv://jeffrey:Joon9921!@@cluster0.yibu4.gcp.mongodb.net/nemv', { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true }, (err) => {
+const cfg = require('../config')
+console.log(cfg)
+
+mongoose.connect(cfg.dbUrl, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true }, (err) => {
   if (err) return console.error(err)
   console.log('mongoose connected!')
-})
-
 // User.create({ name: 'Jeffrey'})
 //   .then(r => console.log(r))
 //   .catch(e => console.error(e))
@@ -64,3 +63,6 @@ mongoose.connect('mongodb+srv://jeffrey:Joon9921!@@cluster0.yibu4.gcp.mongodb.ne
 // User.find()
 //   .then(r => console.log(r))
 //   .catch(e => console.error(e))
+})
+
+module.exports = app;
