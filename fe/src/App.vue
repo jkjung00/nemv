@@ -51,23 +51,44 @@ export default {
       items: [
         {
           icon: 'fa-home',
-          title: 'Home',
+          title: 'LV0',
           to: {
             path: '/'
           }
         },
         {
+          icon: 'fa-home',
+          title: 'LV1',
+          to: {
+            path: '/lv1'
+          }
+        },
+        {
+          icon: 'fa-home',
+          title: 'LV2',
+          to: {
+            path: '/lv2'
+          }
+        },
+        {
+          icon: 'fa-home',
+          title: 'LV3',
+          to: {
+            path: '/lv3'
+          }
+        },
+        {
           icon: 'fa-user',
-          title: 'User',
+          title: '사용자관리',
           to: {
             path: '/user'
           }
         },
         {
           icon: 'fa-book',
-          title: 'Header',
+          title: '페이지관리',
           to: {
-            path: '/header'
+            path: '/page'
           }
         }
       ],

@@ -6,6 +6,9 @@ const cfg = require('../../../config');
 
 /* GET users listing. */
 router.use('/sign', require('./sign'))
+router.use('/manage', require('./manage'))
+router.use('/user', require('./user'))
+router.use('/test', require('./test'))
 
 const verifyToken = (t) => {
   return new Promise((resolve, reject) => {
@@ -24,11 +27,6 @@ router.all('*', function(req, res, next) {
     })
     .catch(e => res.send({ success: false, msg: e.message }))
 });
-
-router.use('/user', require('./user'))
-router.use('/test', require('./test'))
-router.use('/sign', require('./sign'))
-router.use('/manage', require('./manage'))
 
 router.all('*', function(req, res, next) {
   next(createError(404, 'have not API'));
